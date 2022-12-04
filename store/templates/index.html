@@ -1,0 +1,17 @@
+{% extends '/home/russet_potato/switch_study/book_store/store/templates/base.html' %}
+{% block title %}
+All book
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for book in books %}
+    <li><a href={{ book.get_absolute_url }}>{{ book.title }}</a> written by {{ book.author }}
+    </li>
+    {% endfor %}
+</ul>
+<hr>
+<p> Total no of books: {{ total_no_books }}</p>
+<p>Average rating : {{ avg_rating.rating__avg }}</p>
+
+{% endblock %}

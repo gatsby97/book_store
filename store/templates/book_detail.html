@@ -1,0 +1,16 @@
+{% extends '/home/russet_potato/switch_study/book_store/store/templates/base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<h2>{{ author }}</h2>
+<p> the book has a rating of {{ rating }} 
+    {% if is_bestseller %}
+         and is a bestseller
+    {% else %}
+        isn't a bestseller 
+    {% endif %}
+</p>
+{% endblock %}
